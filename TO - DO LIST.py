@@ -2,32 +2,32 @@ import tkinter as tk
 from tkinter import messagebox
 
 class ToDoApp:
-    def _init_(self, root):
+    def __init__(self, root):
         self.root = root
         self.root.title("To-Do List")
         self.root.geometry("400x450")
-        self.root.config(bg="white")
+        self.root.config(bg="yellow")
 
         self.tasks = []
 
         # Title Label
-        self.label = tk.Label(root, text="To-Do List", font=("Helvetica", 18, "bold"), bg="white")
+        self.label = tk.Label(root, text="To-Do List", font=("TIMES NEW ROMAN", 18, "bold"), bg="yellow")
         self.label.pack(pady=10)
 
         # Entry box
-        self.task_entry = tk.Entry(root, font=("Helvetica", 14))
+        self.task_entry = tk.Entry(root, font=("TIMES NEW ROMAN", 14))
         self.task_entry.pack(pady=10, padx=20, fill=tk.X)
 
         # Add button
-        self.add_button = tk.Button(root, text="Add Task", font=("Helvetica", 12), command=self.add_task)
+        self.add_button = tk.Button(root, text="Add Task", font=("TIMES NEW ROMAN", 12), command=self.add_task)
         self.add_button.pack(pady=5)
 
         # Listbox for tasks
-        self.task_listbox = tk.Listbox(root, font=("Helvetica", 12), height=10, selectbackground="lightblue")
+        self.task_listbox = tk.Listbox(root, font=("TIMES NEW ROMAN", 12), height=10, selectbackground="lightblue")
         self.task_listbox.pack(padx=20, pady=10, fill=tk.BOTH, expand=True)
 
         # Button frame
-        self.button_frame = tk.Frame(root, bg="white")
+        self.button_frame = tk.Frame(root, bg="yellow")
         self.button_frame.pack(pady=5)
 
         self.remove_button = tk.Button(self.button_frame, text="Remove Task", command=self.remove_task)
